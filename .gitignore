@@ -1,0 +1,9 @@
+*.pyc
+*.sw*
+*.bak
+logs
+logs/*
+samples
+samples/*
+bak
+bak/*
