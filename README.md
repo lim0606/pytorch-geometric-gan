@@ -78,7 +78,9 @@ ln -s <PATH>/<TO>/<LSUN> data/lsun
 
 ## Reproducing Experiments
 ### Exp1: Mixture of Gaussian
-`python main.py standard geogan --cuda --dataset toy4 --dataroot '' --lrD 0.001 --lrG 0.001 --nc 2 --nz 4 --ngf 128 --ndf 128 --model_G toy4 --model_D toy4 --batchSize 500 --experiment samples/toy4_geogan_toy4_rmsprop_lr001_c1 --niter 500 --ndisplay 100 --nsave 50`
+```
+python main.py standard geogan --cuda --dataset toy4 --dataroot '' --lrD 0.001 --lrG 0.001 --nc 2 --nz 4 --ngf 128 --ndf 128 --model_G toy4 --model_D toy4 --batchSize 500 --experiment samples/toy4_geogan_toy4_rmsprop_lr001_c1 --niter 500 --ndisplay 100 --nsave 50
+```
 
 or execute following scripts in the directory of this repo.
 ``` 
@@ -87,7 +89,9 @@ or execute following scripts in the directory of this repo.
 ```
 
 ### Exp2: MNIST
-`python main.py standard geogan --cuda --dataset mnist --dataroot data/mnist --imageSize 64 --nc 1 --lrD 0.0002 --lrG 0.0002 --model_G dcgan --model_D dcgan --Giters 10 --experiment samples/mnist_geogan_dcgan_rmsprop_lr0002_kg10_c1 --niter 25 --ndisplay 100 --nsave 5`
+```
+python main.py standard geogan --cuda --dataset mnist --dataroot data/mnist --imageSize 64 --nc 1 --lrD 0.0002 --lrG 0.0002 --model_G dcgan --model_D dcgan --ndf 128 --ngf 128 --Giters 10 --niter 25 --ndisplay 100 --nsave 5 --experiment samples/mnist_geogan_dcgan128_rmsprop_lr0002_kg10_c1
+```
 
 or execute following scripts in the directory of this repo.
 ``` 
@@ -95,7 +99,9 @@ or execute following scripts in the directory of this repo.
 ```
 
 ### Exp3: CelebA
-`python main.py standard geogan --cuda --dataset folder --dataroot data/celeba --lrD 0.0002 --lrG 0.0002 --loadSize 96 --imageSize 64 --Giters 10 --niter 50 --ndisplay 500 --nsave 5 --experiment samples/celeba_geogan_dcgan_rmsprop_lr0002_kg10_c1`
+```
+python main.py standard geogan --cuda --dataset folder --dataroot data/celeba --loadSize 96 --imageSize 64 --lrD 0.0002 --lrG 0.0002 --model_G dcgan --model_D dcgan --ndf 128 --ngf 128 --Giters 10 --niter 50 --ndisplay 500 --nsave 5 --experiment samples/celeba_geogan_dcgan128_rmsprop_lr0002_kg10_c1
+```
 
 or execute following scripts in the directory of this repo.
 ``` 
@@ -103,7 +109,9 @@ or execute following scripts in the directory of this repo.
 ```
 
 ### Exp4: LSUN
-`python main.py standard geogan --cuda --dataset lsun --dataroot data/lsun --imageSize 64 --lrD 0.0002 --lrG 0.0002 --Giters 10 --niter 5 --nsave 1 --ndisplay 500 --experiment samples/lsun_geogan_dcgan_rmsprop_lr0002_kg10_c1`
+```
+python main.py standard geogan --cuda --dataset lsun --dataroot data/lsun --imageSize 64 --lrD 0.0002 --lrG 0.0002 --model_G dcgan --model_D dcgan --ndf 128 --ngf 128 --Giters 10 --niter 5 --nsave 1 --ndisplay 500 --experiment samples/lsun_geogan_dcgan128_rmsprop_lr0002_kg10_c1
+```
 
 or execute following scripts in the directory of this repo.
 ``` 
